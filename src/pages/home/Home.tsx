@@ -1,4 +1,4 @@
-
+import "./styles/_Home.scss";
 
 const Home = () => {
   return (

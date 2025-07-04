@@ -1,0 +1,51 @@
+// Flex
+
+@mixin flex-center($dir) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+
+@mixin flex-left-center($dir) {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin flex-right-center($dir) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin flex-between($dir) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+@mixin flex-around($dir) {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: $dir;
+}
+
+// Shadow
+
+@mixin box-shadow($first-col, $second-col) {
+  box-shadow:
+    inset -6px -6px 10px rgba($first-col, 0.7),
+    inset 6px 6px 10px rgba($second-col, 0.3);
+}
+
+@mixin hover-box-shadow($first-col, $second-col) {
+  box-shadow:
+    inset -10px -10px 10px rgba($second-col, 0.7),
+    inset 16px 16px 10px rgba($first-col, 0.2);
+}

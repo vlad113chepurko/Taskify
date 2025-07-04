@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("/fonts/Quicksand-Regular.ttf");
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/fonts/Poppins-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a, p {
+  font-size: 1rem;
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+body {
+  height: 100dvh;
+}
+
+html.dark body {
+  background-color: #1e1e1e;
+  color: #1e1e1e;
+  transition: background-color 0.5s;
+}
+
+html.light body {
+  background-color: #f9f9f9;
+  color: #f9f9f9;
+  transition: background-color 0.5s;
+}
+html.light body h1 {
+  color: #1e1e1e;
+}
+
+/*# sourceMappingURL=index.css.map */

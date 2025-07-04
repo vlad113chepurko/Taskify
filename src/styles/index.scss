@@ -1,0 +1,52 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a, p {
+  font-size: 1rem;
+  font-family: $poppins;
+}
+
+body {
+  height: 100dvh;
+}
+
+html.dark {
+  body {
+    background-color: $bg-dark;
+    color: $text-light;
+    transition: background-color 0.50s;
+  }
+}
+
+html.light {
+  body {
+    background-color: $bg-light;
+    color: $text-dark;
+
+    transition: background-color 0.50s;
+
+    h1 {
+      color: $text-light;
+    }
+  }
+}

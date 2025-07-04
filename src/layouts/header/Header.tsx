@@ -1,9 +1,11 @@
-
+import './_Header.scss';
+import components from "@components/components";
 
 const Header = () => {
   return (
-    <header>
-      <h1>Header</h1>
+    <header className="header">
+      <components.Navigation />
+      <components.ToggleTheme />
     </header>
   );
 };
