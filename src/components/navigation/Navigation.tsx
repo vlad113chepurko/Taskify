@@ -1,15 +1,24 @@
 import './styles/_Navigation.scss';
 import "@layouts/header/_Header.scss";
 import {Link} from 'react-router-dom';
+import logo from '@assets/logo.png';
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+  const navigate = useNavigate();
   return (
-    <div className={"header__container-left"}>
+    <div onClick={() => navigate('/')} className={"header__container-left"}>
       <nav className="navigation">
-        <h1 className={'header__logo'}>To-do List</h1>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <i className={"header__logo-container"}>
+          <img
+            src={logo}
+            alt="logo"
+          />
+        </i>
+        <Link to="/tasks">My tasks</Link>
+        <Link to="/add">Add new task</Link>
+        <Link to="/completed">Completed tasks</Link>
+        <Link to="/deleted">Deleted tasks</Link>
       </nav>
     </div>
   )

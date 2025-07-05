@@ -2,25 +2,35 @@
 @use '@styles/variables' as *;
 
 .header {
-  height: 100px;
+  height: 120px;
   width: 100%;
   @include flex-between(row);
-  padding: 0 1rem 0 1rem;
+  padding: 1rem;
   background-color: $bg-light;
   box-shadow:
   inset 6px 6px 10px rgba($shadow, 0.7),
   inset -6px -6px 10px rgba($bg-dark, 0.15);
+
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
-.header__logo {
-  font-family: $logo-fn;
-  font-size: 1.5rem;
+.header__logo-container {
+  @include flex-center(none);
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+
   cursor: pointer;
-  border-radius: 5px;
-  margin-right: 1rem;
-  padding: 0.4rem;
-  background-color: $bg-light;
-  @include box-shadow($shadow, $bg-dark)
+
+
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
 }
 
 .header__circle {
