@@ -22,31 +22,58 @@ li {
 }
 
 a, p {
-  font-size: 1rem;
   font-family: $poppins;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $quicksand;
 }
 
 body {
   height: 100dvh;
+  background-color: $bg-light;
+  color: $text-dark;
+  transition: background-color 0.5s;
 }
 
 html.dark {
   body {
     background-color: $bg-dark;
-    color: $text-light;
-    transition: background-color 0.50s;
+    color: $text-dark;
+    transition: background-color 0.50s;;
+  }
+
+  .header {
+    background-color: $bg-dark;
+    @include box-shadow-dark;
+
+    a {
+      color: $shadow;
+    }
+  }
+
+  .header__circle {
+    @include box-shadow-light-button;
   }
 }
 
 html.light {
   body {
     background-color: $bg-light;
-    color: $text-dark;
-
+    color: $text-light;
     transition: background-color 0.50s;
+  }
 
-    h1 {
-      color: $text-light;
+  .header {
+    background-color: $bg-light;
+    @include box-shadow-light;
+
+    a {
+      color: $link;
     }
+  }
+
+  .header__circle {
+    @include box-shadow-dark-button;
   }
 }

@@ -1,19 +1,23 @@
-import { Route, Routes } from "react-router-dom";
-import pages from "@pages/pages.ts";
+import { useEffect } from "react";
+import { Outlet } from 'react-router-dom';
+import useChangeTheme from "@hooks/useChangeTheme";
 import layouts from "@layouts/layouts";
 
+
 function App() {
+  const { initTheme } = useChangeTheme();
+
+  useEffect(() => {
+    initTheme();
+  }, []);
 
   return (
-    <>
-      <layouts.Header />
-      <Routes>
-        <Route path={"*"} element={<div><p>404</p></div>} />
-        <Route path={"/"} element={ <pages.Home /> } />
-      </Routes>
-      <layouts.Footer />
-    </>
-  )
+      <>
+        <layouts.Header />
+        <Outlet />
+        <layouts.Footer />
+      </>
+  );
 }
 
-export default App
+export default App;

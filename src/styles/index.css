@@ -26,27 +26,50 @@ li {
 }
 
 a, p {
-  font-size: 1rem;
   font-family: "Poppins-Regular", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand-Regular", sans-serif;
 }
 
 body {
   height: 100dvh;
-}
-
-html.dark body {
-  background-color: #1e1e1e;
-  color: #1e1e1e;
-  transition: background-color 0.5s;
-}
-
-html.light body {
   background-color: #f9f9f9;
   color: #f9f9f9;
   transition: background-color 0.5s;
 }
-html.light body h1 {
+
+html.dark body {
+  background-color: #2A2D32;
+  color: #f9f9f9;
+  transition: background-color 0.5s;
+}
+html.dark .header {
+  background-color: #2A2D32;
+  box-shadow: inset 18px 18px 20px rgba(61, 61, 61, 0.3), inset -18px -18px 20px rgba(255, 255, 255, 0.1);
+}
+html.dark .header a {
+  color: #D1D9E6;
+}
+html.dark .header__circle {
+  box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.3), inset -6px -6px 5px rgba(255, 255, 255, 0.3);
+}
+
+html.light body {
+  background-color: #f9f9f9;
   color: #1e1e1e;
+  transition: background-color 0.5s;
+}
+html.light .header {
+  background-color: #f9f9f9;
+  box-shadow: inset 6px 6px 30px rgba(42, 45, 50, 0.3), inset -6px -6px 30px rgba(255, 255, 255, 0.3);
+}
+html.light .header a {
+  color: #060a35;
+}
+html.light .header__circle {
+  box-shadow: inset 8px 8px 10px rgba(61, 61, 61, 0.3), inset -18px -18px 20px rgba(255, 255, 255, 0.1);
 }
 
 /*# sourceMappingURL=index.css.map */

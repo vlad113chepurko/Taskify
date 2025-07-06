@@ -5,25 +5,23 @@
   height: 120px;
   width: 100%;
   @include flex-between(row);
-  padding: 1rem;
-  background-color: $bg-light;
-  box-shadow:
-  inset 6px 6px 10px rgba($shadow, 0.7),
-  inset -6px -6px 10px rgba($bg-dark, 0.15);
+  padding: 1rem 5rem 1rem 5rem;
 
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
+
+  transition: background-color 0.50s;
 }
 
 .header__logo-container {
   @include flex-center(none);
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
 
+  background: none;
+
   cursor: pointer;
-
-
 
   img {
     object-fit: cover;
@@ -33,19 +31,16 @@
   }
 }
 
+// Circle
+
 .header__circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
-  @include box-shadow($shadow, $bg-dark);
   @include flex-center(row);
 
   transition:  box-shadow 1s ease-in-out;
-
-  &:hover {
-    @include hover-box-shadow($bg-dark, $shadow);
-  }
 }
 
 .header__container-left {

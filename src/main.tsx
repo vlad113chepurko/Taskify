@@ -1,10 +1,25 @@
-import { BrowserRouter } from 'react-router-dom';
-import { createRoot } from 'react-dom/client'
-import "@styles/index.scss"
-import App from './App.tsx'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createRoot } from "react-dom/client";
+import '@styles/index.css';
+import App from "./App";
+import pages from '@pages/pages';
 
-createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-)
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      { index: true, element: <pages.Home /> },
+      { path: "tasks", element: <pages.Tasks /> },
+      { path: "add", element: <pages.NewTask /> },
+      { path: "deleted", element: <pages.DeletedTasks /> },
+      { path: "completed", element: <pages.CompletedTasks /> },
+      { path: "*", element: <pages.NotFound /> },
+    ],
+  },
+
+]);
+
+createRoot(document.getElementById("root")!).render(
+  <RouterProvider router={router} />
+);
