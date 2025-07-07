@@ -14,14 +14,18 @@ const ToggleTheme = () => {
 
   return (
     <div className="header__container-right">
-      <i id={"toggle-theme"} onClick={onToggle} className="header__circle">
-        <img
-          src={theme === 'light' ? sun : moon}
-          alt={theme === 'light' ? 'sun' : 'moon'}
-          width={30}
-          height={30}
-        />
-      </i>
+      <div className="header__circle-wrapper">
+        <div id={"toggle-theme"} onClick={onToggle} className="header__circle-over">
+          <div className="header__circle-bottom">
+            <img
+              src={theme === 'light' ? sun : moon}
+              alt={theme === 'light' ? 'sun' : 'moon'}
+              width={30}
+              height={30}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

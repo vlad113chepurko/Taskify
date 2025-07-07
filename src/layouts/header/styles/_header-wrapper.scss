@@ -7,8 +7,7 @@
   @include flex-between(row);
   padding: 1rem 5rem 1rem 5rem;
 
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-radius: 35px;
 
   transition: background-color 0.50s;
 }
@@ -33,14 +32,35 @@
 
 // Circle
 
-.header__circle {
+.header__circle-wrapper {
+  position: relative;
+  width: 62px;
+  height: 62px;
+}
+
+.header__circle-over {
+  width: 62px;
+  height: 62px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.header__circle-bottom {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
   cursor: pointer;
   @include flex-center(row);
-
-  transition:  box-shadow 1s ease-in-out;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: all 0.4s ease;
 }
 
 .header__container-left {

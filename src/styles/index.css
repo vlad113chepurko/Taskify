@@ -35,7 +35,8 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
-  background-color: #f9f9f9;
+  padding: 1rem;
+  background-color: #E3E6EC;
   color: #f9f9f9;
   transition: background-color 0.5s;
 }
@@ -45,31 +46,43 @@ html.dark body {
   color: #f9f9f9;
   transition: background-color 0.5s;
 }
-html.dark .header {
+html.dark .header, html.dark .footer {
   background-color: #2A2D32;
-  box-shadow: inset 18px 18px 20px rgba(61, 61, 61, 0.3), inset -18px -18px 20px rgba(255, 255, 255, 0.1);
+  box-shadow: inset -3px -3px 6px 0 rgba(255, 255, 255, 0.25), inset 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
 }
-html.dark .header a {
+html.dark .header a, html.dark .footer a {
   color: #D1D9E6;
 }
-html.dark .header__circle {
-  box-shadow: inset 6px 6px 10px rgba(0, 0, 0, 0.3), inset -6px -6px 5px rgba(255, 255, 255, 0.3);
+html.dark .header__circle-over {
+  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
 }
-
+html.dark .header__circle-bottom {
+  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
+}
 html.light body {
-  background-color: #f9f9f9;
+  background-color: #E3E6EC;
   color: #1e1e1e;
   transition: background-color 0.5s;
 }
-html.light .header {
-  background-color: #f9f9f9;
-  box-shadow: inset 6px 6px 30px rgba(42, 45, 50, 0.3), inset -6px -6px 30px rgba(255, 255, 255, 0.3);
+html.light .header, html.light .footer {
+  background-color: #E3E6FC;
+  box-shadow: inset 3px 3px 4px rgba(255, 255, 255, 0.9), inset -3px -3px 4px #D1D9E6;
 }
-html.light .header a {
+html.light .header a, html.light .footer a {
   color: #060a35;
 }
-html.light .header__circle {
-  box-shadow: inset 8px 8px 10px rgba(61, 61, 61, 0.3), inset -18px -18px 20px rgba(255, 255, 255, 0.1);
+html.light .header__circle-over {
+  background: radial-gradient(70.09% 70.09% at 33% 32%, white 15.38%, #E3E6FC 74.52%);
+  box-shadow: 0 0 20px rgba(227, 230, 252, 0.7);
+}
+html.light .header__circle-bottom {
+  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(203.9677419355, 209.435483871, 249.5322580645) 40%, #E3E6FC 74.52%);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(255, 255, 255, 0.7);
+}
+html.light .header__circle-bottom:hover {
+  background: rgb(250.0322580645, 250.564516129, 254.4677419355);
+  box-shadow: 0 0 12px rgba(227, 230, 252, 0.9);
 }
 
 /*# sourceMappingURL=index.css.map */

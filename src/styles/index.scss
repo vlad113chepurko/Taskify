@@ -31,6 +31,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
+  padding: 1rem;
   background-color: $bg-light;
   color: $text-dark;
   transition: background-color 0.5s;
@@ -52,8 +53,16 @@ html.dark {
     }
   }
 
-  .header__circle {
-    @include box-shadow-light-button;
+  .header__circle-over {
+    @include dark-button-over;
+  }
+
+  .header__circle-bottom {
+    @include dark-button-bottom;
+  }
+
+  .footer {
+    @extend .header;
   }
 }
 
@@ -65,7 +74,7 @@ html.light {
   }
 
   .header {
-    background-color: $bg-light;
+    background-color: $bg-block;
     @include box-shadow-light;
 
     a {
@@ -73,7 +82,16 @@ html.light {
     }
   }
 
-  .header__circle {
-    @include box-shadow-dark-button;
+  .header__circle-over {
+    @include light-button-over;
   }
+
+  .header__circle-bottom {
+    @include light-button-bottom;
+  }
+
+  .footer {
+    @extend .header;
+  }
+
 }
