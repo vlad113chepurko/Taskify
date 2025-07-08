@@ -7,9 +7,10 @@
   @include flex-between(row);
   padding: 1rem 5rem 1rem 5rem;
 
-  border-radius: 35px;
-
   transition: background-color 0.50s;
+
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 
 .header__logo-container {

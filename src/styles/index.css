@@ -25,8 +25,9 @@ li {
   list-style: none;
 }
 
-a, p {
+a, p, label, button, input {
   font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.1rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -35,10 +36,34 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
-  padding: 1rem;
   background-color: #E3E6EC;
   color: #f9f9f9;
   transition: background-color 0.5s;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-family: "Poppins-Regular", sans-serif;
+  cursor: pointer;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  padding-left: 1rem;
 }
 
 html.dark body {
@@ -60,6 +85,25 @@ html.dark .header__circle-over {
 html.dark .header__circle-bottom {
   background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
 }
+html.dark input {
+  box-shadow: inset -3px -3px 6px 0 rgba(255, 255, 255, 0.25), inset 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+  color: #f9f9f9;
+}
+html.dark button {
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.25), -3px -3px 6px 0 rgba(255, 255, 255, 0.25);
+  background-color: #2A2D32;
+  color: #f9f9f9;
+}
+html.dark button:hover {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3), inset -2px -2px 4px rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.5s ease-in-out;
+}
+html.dark .tasks__form {
+  background-color: #2A2D32;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.25), -3px -3px 6px 0 rgba(255, 255, 255, 0.25);
+}
+
 html.light body {
   background-color: #E3E6EC;
   color: #1e1e1e;
@@ -83,6 +127,24 @@ html.light .header__circle-bottom {
 html.light .header__circle-bottom:hover {
   background: rgb(250.0322580645, 250.564516129, 254.4677419355);
   box-shadow: 0 0 12px rgba(227, 230, 252, 0.9);
+}
+html.light button {
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9), -3px -3px 6px #D1D9E6;
+  background-color: #E3E6FC;
+  color: #1e1e1e;
+}
+html.light button:hover {
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.7), inset -2px -2px 4px rgba(209, 217, 230, 0.7);
+  transition: box-shadow 0.5s ease-in-out;
+}
+html.light .tasks__form {
+  background-color: #E3E6FC;
+  box-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9), -3px -3px 6px #D1D9E6;
+}
+html.light input {
+  box-shadow: inset 3px 3px 4px rgba(255, 255, 255, 0.9), inset -3px -3px 4px #D1D9E6;
+  background-color: #E3E6FC;
+  color: #1e1e1e;
 }
 
 /*# sourceMappingURL=index.css.map */

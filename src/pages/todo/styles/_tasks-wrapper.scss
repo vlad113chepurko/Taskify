@@ -1,2 +1,24 @@
-@use "@styles/mixins";
-@use "@styles/variables";
+@use "@styles/mixins" as *;
+@use "@styles/variables" as *;
+
+.tasks__wrapper {
+  width: 100%;
+  height: 100%;
+
+  @include flex-center(column);
+
+  border: 1px solid red;
+
+  margin: 0 auto;
+}
+
+.tasks__list {
+  width: 100%;
+  height: auto;
+
+  @include flex-center(column);
+
+  border: 1px solid red;
+
+  gap: 1rem;
+}

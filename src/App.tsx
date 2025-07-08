@@ -12,11 +12,11 @@ function App() {
   }, []);
 
   return (
-      <>
+      <div className={'App'}>
         <layouts.Header />
         <Outlet />
         <layouts.Footer />
-      </>
+      </div>
   );
 }
 

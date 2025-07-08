@@ -6,7 +6,7 @@ const Tasks = () => {
   const tasks = useTasksStore((state) => state.tasks);
   const navigate = useNavigate();
   return (
-    <div>
+    <div className={"tasks__wrapper"}>
       <h1>Tasks</h1>
       {tasks.length > 1 ? (
         tasks.map((task, index) => {
@@ -18,11 +18,12 @@ const Tasks = () => {
             )
           })
       ) : (
-        <h2>
-          You dont have any tasks yet!
-          Add a new task
+        <div className={"tasks__list"}>
+          <h2>
+            You dont have any tasks yet!
+          </h2>
           <button onClick={() => navigate('/add')}>Add task</button>
-        </h2>
+        </div>
       )}
     </div>
   );
