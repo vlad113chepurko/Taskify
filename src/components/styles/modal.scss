@@ -1,0 +1,24 @@
+@use '@styles/shadows' as *;
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.modal {
+  width: 200px;
+  height: 50px;
+
+  @include flex-left-center(row);
+}
+
+html.light {
+  .modal {
+    @include box-shadow-light;
+    background-color: $bg-block;
+  }
+}
+
+html.dark {
+  .modal {
+    @include box-shadow-dark;
+    background-color: transparent;
+  }
+}

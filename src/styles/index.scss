@@ -33,18 +33,16 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
-  background-color: $bg-light;
+  background-color: $white;
   color: $text-dark;
   transition: background-color 0.5s;
 }
 
 .App {
-  @include flex-center(column);
+  @include flex-between(column);
 
   height: 100dvh;
   width: 100%;
-
-  border: 1px solid blue;
 }
 
 button {
@@ -88,39 +86,15 @@ html.dark {
     @include dark-button-bottom;
   }
 
-  input {
-    @include box-shadow-dark;
-    background-color: transparent;
-    color: $text-dark;
-  }
-
-  button {
-    @include button-dark-shadow;
-    background-color: $bg-dark;
-    color: $text-dark;
-
-    &:hover {
-      box-shadow:
-        inset 2px 2px 4px rgba(0, 0, 0, 0.3),
-        inset -2px -2px 4px rgba(255, 255, 255, 0.15);
-      transition: box-shadow 0.5s ease-in-out;
-    }
-  }
-
   .footer {
     @extend .header;
-  }
-
-  .tasks__form {
-    background-color: $bg-dark;
-    @include button-dark-shadow;
   }
 
 }
 
 html.light {
   body {
-    background-color: $bg-light;
+    background-color: $white;
     color: $text-light;
     transition: background-color 0.50s;
   }
@@ -140,30 +114,6 @@ html.light {
 
   .header__circle-bottom {
     @include light-button-bottom;
-  }
-
-  button {
-    @include button-light-shadow;
-    background-color: $bg-block;
-    color: $text-light;
-
-    &:hover {
-      box-shadow:
-        inset 2px 2px 4px rgba($white, 0.7),
-        inset -2px -2px 4px rgba($shadow, 0.7);
-      transition: box-shadow 0.5s ease-in-out;
-    }
-  }
-
-  .tasks__form {
-    background-color: $bg-block;
-    @include button-light-shadow;
-  }
-
-  input {
-    @include box-shadow-light;
-    background-color: $bg-block;
-    color: $text-light;
   }
 
   .footer {

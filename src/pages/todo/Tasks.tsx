@@ -7,24 +7,26 @@ const Tasks = () => {
   const navigate = useNavigate();
   return (
     <div className={"tasks__wrapper"}>
-      <h1>Tasks</h1>
-      {tasks.length > 1 ? (
-        tasks.map((task, index) => {
+      <div className={"tasks__container"}>
+        <h1>Tasks</h1>
+        {tasks.length > 0 ? (
+          tasks.map((task) => {
             return (
-              <div key={index}>
-                <h3>{task.name}</h3>
+              <div key={task.id}>
+                <h3>{task.title}</h3>
                 <p>{task.description}</p>
               </div>
             )
           })
-      ) : (
-        <div className={"tasks__list"}>
-          <h2>
-            You dont have any tasks yet!
-          </h2>
-          <button onClick={() => navigate('/add')}>Add task</button>
-        </div>
-      )}
+        ) : (
+          <div className={"tasks__list"}>
+            <h2>
+              You dont have any tasks yet!
+            </h2>
+            <button onClick={() => navigate('/add')}>Add task</button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -3,13 +3,24 @@
 // Shadow
 @mixin box-shadow-light() {
   box-shadow:
-    inset 3px 3px 4px rgba($white, 0.9),
-    inset -3px -3px 4px $shadow;
+     10px 10px 20px rgba($white, 0.9),
+     -10px -10px 20px $shadow;
 }
 
 @mixin box-shadow-dark() {
-  box-shadow: inset -3px -3px 6px 0 rgba(255, 255, 255, 0.25),
-  inset 3px 3px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.20),
+  10px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+@mixin input-shadow-dark() {
+  box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.10),
+  inset 3px 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+@mixin input-shadow-light() {
+  box-shadow:
+    inset 3px 3px 6px rgba(0, 0, 0, 0.25),
+    inset -3px -3px 6px rgba($shadow, 0.10),;
 }
 
 @mixin dark-button-over() {

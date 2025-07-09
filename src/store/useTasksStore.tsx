@@ -1,11 +1,5 @@
 import { create } from 'zustand';
-
-type Task = {
-  name: string;
-  id: string;
-  description: string;
-  completed: boolean;
-};
+import type { Task } from '../types/Todo';
 
 interface TasksStore {
   tasks: Task[];

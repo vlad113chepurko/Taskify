@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {nanoid} from 'nanoid';
 import type { TaskFormData } from "../../types/Todo";
+import type { Task } from "../../types/Todo";
+import useTasksStore from "@store/useTasksStore";
 import * as yup from 'yup';
 
 const scheme = yup.object({
@@ -10,20 +12,21 @@ const scheme = yup.object({
   description: yup.string().required("Description is required"),
 })
 const NewTask = () => {
+  const setTasks = useTasksStore((state) => state.setTasks);
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<TaskFormData>({
     resolver: yupResolver(scheme),
   })
 
   const onSubmit = (data: TaskFormData) => {
-    const newTask = {
+    const newTask: Task = {
       ...data,
       id: nanoid(),
     }
-    console.log(newTask)
+    setTasks([newTask])
   }
 
   return (
