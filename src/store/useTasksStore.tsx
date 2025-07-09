@@ -6,7 +6,8 @@ interface TasksStore {
   setTasks: (tasks: Task[]) => void;
 }
 
-const useTasksStore = create<TasksStore>((set) => ({
+const useTasksStore =
+  create<TasksStore>((set) => ({
   tasks: [],
   setTasks: (tasks) => set({ tasks }),
 }));

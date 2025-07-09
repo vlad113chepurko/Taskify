@@ -4,6 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import {nanoid} from 'nanoid';
 import type { TaskFormData } from "../../types/Todo";
 import type { Task } from "../../types/Todo";
+import useModalStore from "@store/useModalStore";
+import ModalWindow from "@components/ModalWindow";
 import useTasksStore from "@store/useTasksStore";
 import * as yup from 'yup';
 
@@ -11,6 +13,7 @@ const scheme = yup.object({
   title: yup.string().required("Title is required"),
   description: yup.string().required("Description is required"),
 })
+
 const NewTask = () => {
   const setTasks = useTasksStore((state) => state.setTasks);
   const {
@@ -21,12 +24,15 @@ const NewTask = () => {
     resolver: yupResolver(scheme),
   })
 
+  const { setModal, visible }  = useModalStore();
+
   const onSubmit = (data: TaskFormData) => {
     const newTask: Task = {
       ...data,
       id: nanoid(),
     }
     setTasks([newTask])
+    setModal("New to-do was added!", true );
   }
 
   return (
@@ -50,6 +56,9 @@ const NewTask = () => {
             {...register('description')} />
         </section>
         <button type="submit">Add task</button>
+        {visible && (
+          <ModalWindow />
+        )}
       </form>
     </div>
   );

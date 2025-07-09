@@ -1,0 +1,58 @@
+@use '@styles/shadows' as *;
+@use '@styles/mixins' as *;
+@use '@styles/variables' as *;
+
+.modal {
+  width: auto;
+  padding: 1rem;
+  height: 60px;
+
+  @include flex-left-center(row);
+
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+
+  border-radius: 10px;
+
+  img {
+    margin-right: 1rem;
+  }
+}
+
+.modal {
+  animation: modalOpen 0.3s forwards;
+}
+
+@keyframes modalOpen {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+.modal-close {
+  position: relative;
+  bottom: 10px;
+  left: 15px;
+  cursor: pointer;
+}
+
+html.light {
+  .modal {
+    @include box-shadow-light;
+    background-color: $bg-block;
+  }
+}
+
+html.dark {
+  .modal {
+    @include box-shadow-dark;
+    background-color: transparent;
+  }
+}
