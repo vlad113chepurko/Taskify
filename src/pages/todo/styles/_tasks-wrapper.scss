@@ -47,19 +47,34 @@
     @include flex-left-center(row);
     width: 200px;
     gap: 1rem;
-    border: 1px solid red;
 
     h3 {
       font-size: 1.4rem;
     }
 
-
     input[type="checkbox"] {
       width: 30px;
       height: 30px;
+      border-radius: 4px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 8px;
+        font-size: 1.2rem;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:checked::before {
+        content: "+";
+      }
     }
+
   }
 }
+
+
 
 html.light {
   .tasks__container {
@@ -71,6 +86,15 @@ html.light {
     @include input-shadow-light;
     background-color: $bg-block;
   }
+
+  .tasks__item {
+    input[type="checkbox"] {
+      @include checkbox-light-shadow;
+      background-color: $bg-block;
+      color: $text-light;
+    }
+  }
+
 }
 
 
@@ -81,5 +105,12 @@ html.dark {
 
   .tasks__items-wrapper {
     @include input-shadow-dark;
+  }
+
+  .tasks__item {
+    input[type="checkbox"] {
+      @include checkbox-dark-shadow;
+      color: $text-dark;
+    }
   }
 }

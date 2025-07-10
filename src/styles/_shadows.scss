@@ -78,5 +78,16 @@
   box-shadow:
      2px 2px 4px rgba($white, 0.9),
      -3px -3px 6px $shadow;
+}
 
+@mixin checkbox-light-shadow() {
+  box-shadow:
+    -2px -2px 5px rgba(white, 1),
+    2px  2px 5px rgba(black, 0.1);
+}
+
+@mixin checkbox-dark-shadow() {
+  box-shadow:
+    -2px -2px 5px rgba(white, 0.25),
+    2px  2px 5px rgba(0, 0, 0, 0.25);
 }
