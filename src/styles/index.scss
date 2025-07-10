@@ -33,7 +33,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
-  background-color: $white;
   color: $text-dark;
   transition: background-color 0.5s;
 }
@@ -94,7 +93,7 @@ html.dark {
 
 html.light {
   body {
-    background-color: $white;
+    background-color: $bg-light;
     color: $text-light;
     transition: background-color 0.50s;
   }

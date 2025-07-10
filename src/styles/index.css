@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   height: 100dvh;
-  background-color: #FFF;
   color: #f9f9f9;
   transition: background-color 0.5s;
 }
@@ -85,7 +84,7 @@ html.dark .header__circle-bottom {
   background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
 }
 html.light body {
-  background-color: #FFF;
+  background-color: #E3E6EC;
   color: #1e1e1e;
   transition: background-color 0.5s;
 }

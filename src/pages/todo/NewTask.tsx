@@ -2,20 +2,21 @@ import './styles/_Tasks.scss';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import {nanoid} from 'nanoid';
+import { useNavigate } from 'react-router-dom';
 import type { TaskFormData } from "../../types/Todo";
 import type { Task } from "../../types/Todo";
 import useModalStore from "@store/useModalStore";
 import ModalWindow from "@components/ModalWindow";
 import useTasksStore from "@store/useTasksStore";
 import * as yup from 'yup';
+import {useEffect} from "react";
 
 const scheme = yup.object({
   title: yup.string().required("Title is required"),
-  description: yup.string().required("Description is required"),
 })
 
 const NewTask = () => {
-  const setTasks = useTasksStore((state) => state.setTasks);
+  const { setTasks, tasks  } = useTasksStore();
   const {
     register,
     handleSubmit,
@@ -24,16 +25,28 @@ const NewTask = () => {
     resolver: yupResolver(scheme),
   })
 
+  const navigate = useNavigate();
+
   const { setModal, visible }  = useModalStore();
+
+  useEffect (() => {
+    setModal("", false);
+  }, [])
 
   const onSubmit = (data: TaskFormData) => {
     const newTask: Task = {
       ...data,
       id: nanoid(),
-    }
-    setTasks([newTask])
-    setModal("New to-do was added!", true );
-  }
+    };
+
+    const updatedTasks = [...tasks, newTask];
+    setTasks(updatedTasks);
+    localStorage.setItem('tasks', JSON.stringify(updatedTasks));
+
+    setModal("New to-do was added!", true);
+    navigate("/tasks");
+  };
+
 
   return (
     <div className="tasks__wrapper">
@@ -42,18 +55,11 @@ const NewTask = () => {
           New Task
         </h1>
         <section className={"tasks__form-section"}>
-          <label htmlFor="title">{errors.title?.message || "Enter title"}</label>
+          <label htmlFor="title">{errors.title?.message || "Enter task"}</label>
           <input
             id="title"
             className={errors.title && 'error__input'}
             {...register('title')} />
-        </section>
-        <section className={"tasks__form-section"}>
-          <label htmlFor="description">{errors.description?.message || "Enter description"}</label>
-          <input
-            id="description"
-            className={errors.description && 'error__input'}
-            {...register('description')} />
         </section>
         <button type="submit">Add task</button>
         {visible && (
