@@ -37,6 +37,7 @@ const NewTask = () => {
     const newTask: Task = {
       ...data,
       id: nanoid(),
+      completed: false,
     };
 
     const updatedTasks = [...tasks, newTask];

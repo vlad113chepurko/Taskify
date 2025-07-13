@@ -4,22 +4,25 @@ import useGetTasks from "@hooks/useGetTasks";
 import {useNavigate} from 'react-router-dom';
 
 const TaskItem = () => {
-  const {setTasks, removeTask, tasks} = useTasksStore();
+  const {setTasks, setTaskStatus, removeTask, tasks} = useTasksStore();
   const navigate = useNavigate();
   useGetTasks({setTasks})
 
 
   return (
-
     <div className='tasks__container'>
       {tasks.length > 0 ? (
         tasks.map((task) => (
           <div
             key={task.id}
-            className='tasks__items-wrapper'
+            className={ task.completed ? 'tasks__items-wrapper-completed' : 'tasks__items-wrapper'}
           >
-            <div className='tasks__item'>
-              <input type="checkbox"/>
+            <div
+              className='tasks__item'>
+              <input
+                checked={task.completed}
+                onChange={() => setTaskStatus(task.id, !task.completed)}
+                type="checkbox"/>
               <h3>{task.title}</h3>
             </div>
             <button onClick={() => removeTask(task.id)}>Remove</button>

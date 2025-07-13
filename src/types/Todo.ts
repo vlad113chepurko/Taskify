@@ -4,4 +4,5 @@ export type TaskFormData = {
 
 export type Task = TaskFormData & {
   id: string;
+  completed: boolean;
 }

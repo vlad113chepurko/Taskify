@@ -12,6 +12,8 @@
   10px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
+// input
+
 @mixin input-shadow-dark() {
   box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.10),
   inset 3px 3px 6px rgba(0, 0, 0, 0.25);
@@ -22,6 +24,20 @@
     inset 3px 3px 6px rgba(0, 0, 0, 0.25),
     inset -3px -3px 6px rgba($shadow, 0.10),;
 }
+
+@mixin input-shadow-dark-completed() {
+  box-shadow:
+    inset 3px 3px 6px rgb(203, 215, 62),
+    inset -3px -3px 6px rgb(203, 215, 62);
+}
+
+@mixin input-shadow-light-completed() {
+  box-shadow:
+    inset 3px 3px 6px rgb(79, 84, 32),
+    inset -3px -3px 6px rgb(79, 84, 32);
+}
+
+// button
 
 @mixin dark-button-over() {
   background: radial-gradient(
@@ -67,7 +83,6 @@
   }
 }
 
-
 @mixin button-dark-shadow() {
   box-shadow:  3px 3px 6px 0 rgba(0, 0, 0, 0.25),
   -3px -3px 6px 0 rgba(255, 255, 255, 0.25);
@@ -79,6 +94,8 @@
      2px 2px 4px rgba($white, 0.9),
      -3px -3px 6px $shadow;
 }
+
+// checkbox
 
 @mixin checkbox-light-shadow() {
   box-shadow:

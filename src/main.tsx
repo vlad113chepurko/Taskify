@@ -13,7 +13,6 @@ const router = createBrowserRouter([
       { path: "tasks", element: <pages.Tasks /> },
       { path: "add", element: <pages.NewTask /> },
       { path: "deleted", element: <pages.DeletedTasks /> },
-      { path: "completed", element: <pages.CompletedTasks /> },
       { path: "*", element: <pages.NotFound /> },
     ],
   },

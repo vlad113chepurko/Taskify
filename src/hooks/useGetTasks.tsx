@@ -1,15 +1,11 @@
 import { useEffect } from 'react';
-
-interface Task {
-  id: string;
-  title: string;
-}
+import type {Task} from '../types/Todo';
 
 type UseGetTasksProps = {
   setTasks: (tasks: Task[]) => void;
 };
 
-const useGetTasks = ({ setTasks }: UseGetTasksProps): void => {
+const useGetTasks = ({ setTasks }: UseGetTasksProps) => {
   useEffect(() => {
     const tasksFromStorage = localStorage.getItem("tasks");
 
