@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <header className="header">
       <components.Navigation />
-      <components.ToggleTheme />
     </header>
   );
 };

@@ -1,9 +1,9 @@
 import './styles/_Navigation.scss';
 import "@layouts/header/_Header.scss";
 import useThemeStore from "@store/useThemeStore";
-import { Link } from 'react-router-dom';
+import components from "@components/components";
+import images from "@assets/images";
 import { useNavigate } from "react-router-dom";
-
 
 
 
@@ -14,22 +14,48 @@ const Navigation = () => {
   const navigate = useNavigate();
   const { theme } = useThemeStore();
   return (
-    <div className={"header__container-left"}>
       <nav className="navigation">
-        <i
-          onClick={() => navigate('/')}
-          id={'logo'}
-          className={"header__logo-container"}>
+        <section className="navigation__section">
+          <i
+            onClick={() => navigate('/')}
+            id={'logo'}
+            className={"header__logo-container"}>
+            <img
+              src={ theme === 'light' ? lightLogo : darkLogo }
+              alt="logo"
+            />
+          </i>
+          <components.ToggleTheme />
+        </section>
+        <span className={"header__line"}></span>
+        <div onClick={() => navigate('/tasks')} className="navigation__item">
           <img
-            src={ theme === 'light' ? lightLogo : darkLogo }
-            alt="logo"
+            src={ theme === 'dark' ? images.taskWhite :  images.taskDark }
+            alt="tasks"
+            width={30}
+            height={30}
           />
-        </i>
-        <Link to="/tasks">My tasks</Link>
-        <Link to="/add">Add new task</Link>
-        <Link to="/deleted">Deleted tasks</Link>
+          My tasks
+        </div>
+        <div onClick={() => navigate('/add')} className="navigation__item">
+          <img
+            src={ theme === 'dark' ? images.addWhite :  images.addDark }
+            alt="add"
+            width={30}
+            height={30}
+          />
+          Add new task
+        </div>
+        <div onClick={() => navigate('/deleted')} className="navigation__item">
+          <img
+            src={ theme === 'dark' ? images.remWhite :  images.remDark }
+            alt="remove"
+            width={30}
+            height={30}
+          />
+          Deleted tasks
+        </div>
       </nav>
-    </div>
   )
 }
 

@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import './_App.scss';
 import { Outlet } from 'react-router-dom';
 import useChangeTheme from "@hooks/useChangeTheme";
 import layouts from "@layouts/layouts";

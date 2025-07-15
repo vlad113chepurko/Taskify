@@ -13,7 +13,6 @@ const ToggleTheme = () => {
   }, [toggleTheme]);
 
   return (
-    <div className="header__container-right">
       <div className="header__circle-wrapper">
         <div id={"toggle-theme"} onClick={onToggle} className="header__circle-over">
           <div className="header__circle-bottom">
@@ -26,7 +25,6 @@ const ToggleTheme = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
