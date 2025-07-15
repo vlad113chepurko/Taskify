@@ -1,10 +1,10 @@
 import "./styles/_Tasks.scss";
-import TaskItem from '@components/TaskItem';
+import components from "@components/components";
 
 const Tasks = () => {
   return (
     <div className={"tasks__wrapper"}>
-     <TaskItem />
+     <components.TaskItem />
     </div>
   )
 };

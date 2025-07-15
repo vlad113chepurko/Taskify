@@ -27,7 +27,6 @@ const Navigation = () => {
         </i>
         <Link to="/tasks">My tasks</Link>
         <Link to="/add">Add new task</Link>
-        <Link to="/completed">Completed tasks</Link>
         <Link to="/deleted">Deleted tasks</Link>
       </nav>
     </div>

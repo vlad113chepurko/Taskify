@@ -1,0 +1,35 @@
+@use '@styles/shadows' as *;
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+
+.sort__wrapper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 5rem;
+  @include flex-left-center(row);
+}
+
+.sort__input {
+  width: 200px;
+  height: 40px;
+  text-align: center;
+
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+html.light {
+  .sort__input {
+    @include input-shadow-light;
+    background: $bg-block;
+    color: $text-light;
+  }
+}
+
+html.dark {
+  .sort__input {
+    @include input-shadow-dark;
+    background: $bg-dark;
+    color: $text-dark;
+  }
+}
