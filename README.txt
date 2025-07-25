@@ -21,7 +21,7 @@ Create tasks, mark them as done, and never forget what matters.
 
 📦 Installation
 
-git clone https://github.com/your-username/taskify.git
+git clone https://github.com/vlad113chepurko/taskify.git
 cd taskify
 npm install
 npm run dev
