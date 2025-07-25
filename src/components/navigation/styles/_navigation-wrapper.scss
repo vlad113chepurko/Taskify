@@ -46,21 +46,3 @@
     margin-right: 1rem;
   }
 }
-
-html.light {
-  .navigation__item {
-    @include button-light-shadow;
-    &:hover {
-      @include input-shadow-light;
-    }
-  }
-}
-
-html.dark {
-  .navigation__item {
-    @include button-dark-shadow;
-    &:hover {
-      @include input-shadow-dark;
-    }
-  }
-}

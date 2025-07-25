@@ -1,0 +1,9 @@
+@use "@styles/shadows" as *;
+@use "@styles/variables" as *;
+
+html.light {
+  .footer {
+    background-color: $bg-block;
+    @include box-shadow-light;
+  }
+}

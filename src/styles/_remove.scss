@@ -1,0 +1,32 @@
+@use 'variables' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  height: 100dvh;
+  color: $text-dark;
+  transition: background-color 0.5s;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  cursor: pointer;
+}

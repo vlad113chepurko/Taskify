@@ -1,0 +1,12 @@
+@use '@styles/shadows' as *;
+@use '@styles/variables' as *;
+
+html.dark {
+  .navigation__item {
+    @include button-dark-shadow;
+    color: $text-dark;
+    &:hover {
+      @include input-shadow-dark;
+    }
+  }
+}

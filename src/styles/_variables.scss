@@ -17,11 +17,17 @@ $link: #060a35;
 $bg-light: #E3E6EC;
 $bg-block: #E3E6FC;
 $bg-dark: #2A2D32;
+$light-second-color: #6536f4;
 $text-light: #1e1e1e;
-$text-dark: #f9f9f9;
+$text-dark: #95969e;
 $shadow: #D1D9E6;
 $white: #FFF;
+$remove: #e08989;
 
+// secondColors
+$dark-second-color: #72e2b2;
+$darl-second-color-text-dark: #18543c;
+$light-second-color: linear-gradient(to right, #6325f4, #794bf6);
 
 // Fonts
 $quicksand: 'Quicksand-Regular', sans-serif;

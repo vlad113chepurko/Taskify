@@ -1,0 +1,60 @@
+@use "@styles/shadows" as *;
+@use "@styles/variables" as *;
+
+html.light {
+
+   //  Tasks
+  .tasks__container {
+    @include box-shadow-light;
+    background-color: $bg-block;
+  }
+
+  .tasks__items-wrapper {
+    @include input-shadow-light;
+    background-color: $bg-block;
+  }
+
+  .tasks__item {
+    input[type="checkbox"] {
+      @include checkbox-light-shadow;
+      background-color: $bg-block;
+      color: $text-light;
+    }
+  }
+
+  .tasks__line {
+    background: $light-second-color;
+  }
+
+  // Form
+
+  .tasks__form {
+    background-color: $bg-block;
+    @include button-light-shadow;
+  }
+
+  button {
+    @include button-light-shadow;
+    background-color: $bg-block;
+    color: $text-light;
+
+    &:hover {
+      box-shadow: inset -3px -3px 6px rgba(255, 255, 255, 0.10),
+      inset 3px 3px 6px rgba(0, 0, 0, 0.25);
+      transition: box-shadow 0.5s ease-in-out;
+    }
+  }
+
+  .second__button {
+    @include second-button-light-shadow;
+    background: $light-second-color;
+    color: white;
+  }
+
+  input {
+    @include input-shadow-light;
+    background-color: $bg-block;
+    color: $text-light;
+  }
+
+}

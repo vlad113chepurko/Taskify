@@ -1,0 +1,22 @@
+@use "@styles/shadows" as *;
+@use "@styles/variables" as *;
+
+html.dark {
+
+  .header {
+    background-color: $bg-dark;
+    @include box-shadow-dark;
+
+    a {
+      color: $shadow;
+    }
+  }
+
+  .header__circle-over {
+    @include dark-button-over;
+  }
+
+  .header__circle-bottom {
+    @include dark-button-bottom;
+  }
+}

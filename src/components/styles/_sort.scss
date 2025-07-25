@@ -14,13 +14,17 @@
   height: 40px;
   text-align: center;
 
+  border-radius: 5px;
+
   font-size: 1rem;
   font-weight: 400;
+
+  cursor: pointer;
 }
 
 html.light {
   .sort__input {
-    @include input-shadow-light;
+    @include button-light-shadow;
     background: $bg-block;
     color: $text-light;
   }
@@ -28,8 +32,12 @@ html.light {
 
 html.dark {
   .sort__input {
-    @include input-shadow-dark;
+    @include button-dark-shadow;
     background: $bg-dark;
     color: $text-dark;
+
+    &:hover {
+      @include input-shadow-dark;
+    }
   }
 }

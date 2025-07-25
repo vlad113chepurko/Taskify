@@ -2,7 +2,7 @@ import './styles/_Navigation.scss';
 import "@layouts/header/_Header.scss";
 import useThemeStore from "@store/useThemeStore";
 import components from "@components/components";
-import images from "@assets/images";
+import images from './assets/index';
 import { useNavigate } from "react-router-dom";
 
 

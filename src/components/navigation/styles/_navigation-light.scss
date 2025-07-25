@@ -1,0 +1,12 @@
+@use '@styles/shadows' as *;
+@use '@styles/variables' as *;
+
+html.light {
+  .navigation__item {
+    @include button-light-shadow;
+    color: $text-light;
+    &:hover {
+      @include input-shadow-light;
+    }
+  }
+}

@@ -23,7 +23,7 @@
 }
 
 .tasks__container {
-  width: 90%;
+  width: 100%;
   min-height: 500px;
   height: auto;
   @include flex-center(column);
@@ -43,9 +43,11 @@
   margin-bottom: 1rem;
   padding: 1rem;
 }
+
 .tasks__item {
+  position: relative;
   @include flex-left-center(row);
-  width: 200px;
+  width: 100%;
   gap: 1rem;
 
   h3 {
@@ -53,76 +55,45 @@
   }
 
   input[type="checkbox"] {
-    width: 30px;
-    height: 30px;
-    border-radius: 4px;
+
+    @include flex-center(row);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     position: relative;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 2px;
-      left: 8px;
-      font-size: 1.2rem;
-      transition: all 0.2s ease-in-out;
-    }
-
     &:checked::before {
-      content: "+";
+      content: "✓";
+      position: absolute;
+      left: 10px;
     }
-  }
 
-}
-.tasks__items-wrapper-completed {
-  @extend .tasks__items-wrapper;
-  transition: all 0.2s ease-in-out;
-  opacity: 0.8;
+  }
 }
 
-
-html.light {
-  .tasks__container {
-    @include box-shadow-light;
-    background-color: $bg-block;
-  }
-
-  .tasks__items-wrapper {
-    @include input-shadow-light;
-    background-color: $bg-block;
-  }
-
-  .tasks__item {
-    input[type="checkbox"] {
-      @include checkbox-light-shadow;
-      background-color: $bg-block;
-      color: $text-light;
-    }
-  }
-
-  .tasks__items-wrapper-completed {
-    @include input-shadow-light-completed;
-  }
-
+.remove__button {
+  border-radius: 50%;
+  width: 55px;
+  height: 50px;
+  @include flex-center(row);
 }
 
+.tasks__line {
+  position: absolute;
+  height: 5px;
+  border-radius: 5px;
+  left: 40px;
+  width: 96%;
 
-html.dark {
-  .tasks__container {
-    @include box-shadow-dark;
+  transition:  width 5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    width: 0;
   }
 
-  .tasks__items-wrapper {
-    @include input-shadow-dark;
-  }
-
-  .tasks__item {
-    input[type="checkbox"] {
-      @include checkbox-dark-shadow;
-      background-color: $bg-dark;
-      color: $text-dark;
-    }
-  }
-
-  .tasks__items-wrapper-completed {
-    @include input-shadow-dark-completed;
+  to {
+    width: 96%;
   }
 }

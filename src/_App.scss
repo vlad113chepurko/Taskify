@@ -1,8 +1,8 @@
 @use '@styles/mixins' as *;
 
 .App {
-
   height: 100dvh;
-  width: 100%;
-  padding-left: 300px;
+  max-width: 2540px;
+  padding-left: 360px;
+  padding-right: 60px;
 }

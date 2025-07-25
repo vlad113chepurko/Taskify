@@ -1,0 +1,21 @@
+@use "@styles/shadows" as *;
+@use "@styles/variables" as *;
+
+html.light {
+  .header {
+    background-color: $bg-block;
+    @include box-shadow-light;
+
+    a {
+      color: $link;
+    }
+  }
+
+  .header__circle-over {
+    @include light-button-over;
+  }
+
+  .header__circle-bottom {
+    @include light-button-bottom;
+  }
+}
