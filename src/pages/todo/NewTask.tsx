@@ -5,6 +5,7 @@ import {nanoid} from 'nanoid';
 import { useNavigate } from 'react-router-dom';
 import type { TaskFormData } from "../../types/Todo";
 import type { Task } from "../../types/Todo";
+import TagList from "@components/tags/TagList";
 import useModalStore from "@store/useModalStore";
 import ModalWindow from "@components/ModalWindow";
 import useTasksStore from "@store/useTasksStore";
@@ -61,7 +62,8 @@ const NewTask = () => {
             id="title"
             className={errors.title && 'error__input'}
             {...register('title')} />
-          <label htmlFor="tags">Select tags</label>
+          <label htmlFor="tags">Select tag</label>
+          <TagList />
         </section>
         <div className={"tasks__form-buttons"}>
           <button className={"second__button"} type="submit">Add task</button>
