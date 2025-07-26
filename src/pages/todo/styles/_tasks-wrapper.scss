@@ -30,6 +30,8 @@
 
   border-radius: 35px;
 
+  margin: 0 auto;
+
   padding: 1rem;
 }
 
@@ -50,8 +52,24 @@
   width: 100%;
   gap: 1rem;
 
-  h3 {
-    font-size: 1.4rem;
+  .tasks__item-container {
+    @include flex-left-left(column);
+    width: auto;
+    text-align: left;
+
+    h3 {
+      font-size: 1.4rem;
+    }
+
+    .tasks__item-container-article {
+      text-align: left;
+      @include flex-center(row);
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+
   }
 
   input[type="checkbox"] {
