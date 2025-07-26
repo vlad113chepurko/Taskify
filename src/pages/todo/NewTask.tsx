@@ -61,8 +61,12 @@ const NewTask = () => {
             id="title"
             className={errors.title && 'error__input'}
             {...register('title')} />
+          <label htmlFor="tags">Select tags</label>
         </section>
-        <button type="submit">Add task</button>
+        <div className={"tasks__form-buttons"}>
+          <button className={"second__button"} type="submit">Add task</button>
+          <button className={"second__button"}>Create tags</button>
+        </div>
         {visible && (
           <ModalWindow />
         )}

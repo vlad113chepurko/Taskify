@@ -1,7 +1,8 @@
 @use 'variables' as *;
 
 button {
-  width: 100px;
+  min-width: 100px;
+  width: auto;
   height: 40px;
   border-radius: 10px;
 
