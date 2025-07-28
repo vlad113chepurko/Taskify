@@ -1,8 +1,12 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 @use 'shadows' as *;
-@use 'globals' as *;
+@use 'remove' as *;
+@use 'global' as *;
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: $quicksand;
+}
 
 html.dark {
 

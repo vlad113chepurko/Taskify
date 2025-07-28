@@ -1,0 +1,7 @@
+@use '@styles/shadows' as *;
+@use '@styles/variables' as *;
+
+.tag__modal {
+  @include box-shadow-light;
+  background: $bg-light;
+}

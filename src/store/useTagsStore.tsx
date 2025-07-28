@@ -9,16 +9,15 @@ type Tag = {
 type TagsState = {
   tags: Tag[];
   setNewTag: (newTag: Tag[]) => void;
+  removeTag: (id: string) => void;
 };
 
 const useTagsStore = create<TagsState>((set) => ({
   tags: [
-    { name: 'work', id: nanoid() },
-    { name: 'workout', id: nanoid() },
-    { name: 'school', id: nanoid() }
+    { name: "test", id: nanoid() },
   ],
   setNewTag: (newTag) => set({ tags: newTag }),
-  removeTag: (id: string) => set((state) => ({
+  removeTag: (id) => set((state) => ({
     tags: state.tags.filter(tag => tag.id !== id)
   }))
 }));

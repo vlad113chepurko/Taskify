@@ -2,6 +2,7 @@ import './styles/_Tasks.scss';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { nanoid } from 'nanoid';
+import { useNavigate } from 'react-router-dom';
 import type { TaskFormData, Task } from '../../types/Todo';
 import TagList from '@components/tags/TagList';
 import useModalStore from '@store/useModalStore';
@@ -27,6 +28,8 @@ const NewTask = () => {
   } = useForm<TaskFormData>({
     resolver: yupResolver(scheme),
   });
+
+  const navigate = useNavigate();
 
   const { setModal, visible } = useModalStore();
 
@@ -72,7 +75,10 @@ const NewTask = () => {
           <button className="second__button" type="submit">
             Add task
           </button>
-          <button className="second__button" type="button">
+          <button
+            onClick={() => navigate("/tags")}
+            className="second__button"
+            type="button">
             Create tags
           </button>
         </div>

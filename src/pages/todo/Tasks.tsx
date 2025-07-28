@@ -23,6 +23,11 @@ const Tasks = () => {
   return (
     <div className="tasks__wrapper">
       <div className={"tasks__container"}>
+
+        <article className={"tasks__h1-container"}>
+          <h1>My tasks</h1>
+        </article>
+
         <components.SortTasks />
 
         {sortedTasks.length > 0 ? (

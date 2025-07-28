@@ -1,14 +1,7 @@
 @use 'variables' as *;
 
 button {
-  min-width: 100px;
-  width: auto;
-  height: 40px;
-  border-radius: 10px;
-
-  font-family: $poppins;
-
-  cursor: pointer;
+  border-radius: 5px;
 }
 
 input {

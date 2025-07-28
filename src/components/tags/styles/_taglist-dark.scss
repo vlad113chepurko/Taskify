@@ -1,5 +1,11 @@
 @use '@styles/shadows' as *;
+@use '@styles/variables' as *;
 
 .tags__wrapper {
   @include input-shadow-dark;
+}
+
+.tag__modal  {
+  @include box-shadow-dark;
+  background: $bg-dark;
 }

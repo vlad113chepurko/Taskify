@@ -25,41 +25,19 @@ li {
   list-style: none;
 }
 
-a, p, label, button, input {
-  font-family: "Poppins-Regular", sans-serif;
-  font-size: 1.1rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Quicksand-Regular", sans-serif;
-}
-
 body {
   height: 100dvh;
-  color: #f9f9f9;
+  color: #545454;
   transition: background-color 0.5s;
-}
-
-.App {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  height: 100dvh;
-  width: 100%;
-}
-
-button {
-  width: 100px;
-  height: 40px;
-  border-radius: 10px;
-  font-family: "Poppins-Regular", sans-serif;
-  cursor: pointer;
 }
 
 input[type=checkbox] {
   appearance: none;
   cursor: pointer;
+}
+
+button {
+  border-radius: 5px;
 }
 
 input {
@@ -69,48 +47,33 @@ input {
   padding-left: 1rem;
 }
 
+a, p, label, button, input {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 1.1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Quicksand-Regular", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: "Quicksand-Regular", sans-serif;
+}
+
+html.dark html {
+  color: #545454;
+}
 html.dark body {
   background-color: #2A2D32;
-  color: #f9f9f9;
   transition: background-color 0.5s;
 }
-html.dark .header, html.dark .footer {
-  background-color: #2A2D32;
-  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.2), 10px 10px 20px rgba(0, 0, 0, 0.25);
-}
-html.dark .header a, html.dark .footer a {
-  color: #D1D9E6;
-}
-html.dark .header__circle-over {
-  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
-}
-html.dark .header__circle-bottom {
-  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(74, 79, 87) 15.38%, rgb(35, 38, 41) 74.52%);
+
+html.light html {
+  color: #1e1e1e;
 }
 html.light body {
   background-color: #E3E6EC;
-  color: #1e1e1e;
   transition: background-color 0.5s;
-}
-html.light .header, html.light .footer {
-  background-color: #E3E6FC;
-  box-shadow: 10px 10px 20px rgba(255, 255, 255, 0.9), -10px -10px 20px #D1D9E6;
-}
-html.light .header a, html.light .footer a {
-  color: #060a35;
-}
-html.light .header__circle-over {
-  background: radial-gradient(70.09% 70.09% at 33% 32%, white 15.38%, #E3E6FC 74.52%);
-  box-shadow: 0 0 20px rgba(227, 230, 252, 0.7);
-}
-html.light .header__circle-bottom {
-  background: radial-gradient(70.09% 70.09% at 33% 32%, rgb(203.9677419355, 209.435483871, 249.5322580645) 40%, #E3E6FC 74.52%);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -2px -2px 6px rgba(255, 255, 255, 0.7);
-}
-html.light .header__circle-bottom:hover {
-  background: rgb(250.0322580645, 250.564516129, 254.4677419355);
-  box-shadow: 0 0 12px rgba(227, 230, 252, 0.9);
 }
 
 /*# sourceMappingURL=index.css.map */

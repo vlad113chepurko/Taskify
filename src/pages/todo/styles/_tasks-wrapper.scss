@@ -24,15 +24,20 @@
 
 .tasks__container {
   width: 100%;
-  min-height: 500px;
   height: auto;
-  @include flex-center(column);
 
   border-radius: 35px;
 
   margin: 0 auto;
 
-  padding: 1rem;
+  padding: 5rem;
+}
+
+.tasks__h1-container {
+  border: 1px solid green;
+  margin-bottom: 1rem;
+  width: 100%;
+  @include flex-left-left(row);
 }
 
 .tasks__items-wrapper {

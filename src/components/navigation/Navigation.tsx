@@ -55,6 +55,17 @@ const Navigation = () => {
           />
           Deleted tasks
         </div>
+        <div
+          onClick={() => navigate('/tags')}
+          className="navigation__item">
+          <img
+            src={ theme === 'dark' ? images.tagWhite :  images.tagDark }
+            alt="remove"
+            width={30}
+            height={30}
+          />
+          My tags suko
+        </div>
       </nav>
   )
 }
