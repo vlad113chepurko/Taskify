@@ -34,7 +34,6 @@
 }
 
 .tasks__h1-container {
-  border: 1px solid green;
   margin-bottom: 1rem;
   width: 100%;
   @include flex-left-left(row);
@@ -64,6 +63,10 @@
 
     h3 {
       font-size: 1.4rem;
+    }
+
+    .h3__completed {
+      text-decoration: line-through;
     }
 
     .tasks__item-container-article {
@@ -100,8 +103,12 @@
 }
 
 .second__button {
-  width: auto;
+  width: 150px;
   padding: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 

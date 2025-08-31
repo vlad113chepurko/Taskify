@@ -43,6 +43,10 @@ const NewTask = () => {
     }
   }, [selectedTagId]);
 
+  useEffect(() => {
+    document.title = "Add New Task - Taskify";
+  }, [])
+
   const onSubmit = (data: TaskFormData) => {
     const newTask: Task = {
       ...data,

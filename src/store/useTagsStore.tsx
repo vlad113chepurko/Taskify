@@ -1,5 +1,4 @@
 import { create } from 'zustand';
-import {nanoid} from "nanoid";
 
 type Tag = {
   id: string;
@@ -13,13 +12,12 @@ type TagsState = {
 };
 
 const useTagsStore = create<TagsState>((set) => ({
-  tags: [
-    { name: "test", id: nanoid() },
-  ],
+  tags: JSON.parse(localStorage.getItem('tags') || '[]') as Tag[],
   setNewTag: (newTag) => set({ tags: newTag }),
-  removeTag: (id) => set((state) => ({
-    tags: state.tags.filter(tag => tag.id !== id)
-  }))
+  removeTag: (id) =>
+    set((state) => ({
+      tags: state.tags.filter((tag) => tag.id !== id),
+    })),
 }));
 
 export default useTagsStore;

@@ -21,15 +21,13 @@ const TaskItem = ({ task }: TaskItemProps) => {
   return (
     <div className="tasks__items-wrapper">
       <div className="tasks__item">
-        {task.completed && <span className="tasks__line"></span>}
-
         <input
           checked={task.completed}
           onChange={() => setTaskStatus(task.id, !task.completed)}
           type="checkbox"
         />
         <div className="tasks__item-container">
-          <h3>{task.title}</h3>
+          <h3 className={task.completed ? "h3__completed" : ""}>{task.title}</h3>
           <article className="tasks__item-container-article">
             <div className="tasks__item-container-article">
               <img
