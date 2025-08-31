@@ -12,7 +12,6 @@ const router = createBrowserRouter([
       { index: true, element: <pages.Home /> },
       { path: "tasks", element: <pages.Tasks /> },
       { path: "add", element: <pages.NewTask /> },
-      { path: "deleted", element: <pages.DeletedTasks /> },
       { path: "tags", element: <pages.Tags /> },
       { path: "*", element: <pages.NotFound /> },
     ],

@@ -46,15 +46,6 @@ const Navigation = () => {
           />
           Add new task
         </div>
-        <div onClick={() => navigate('/deleted')} className="navigation__item">
-          <img
-            src={ theme === 'dark' ? images.remWhite :  images.remDark }
-            alt="remove"
-            width={30}
-            height={30}
-          />
-          Deleted tasks
-        </div>
         <div
           onClick={() => navigate('/tags')}
           className="navigation__item">
