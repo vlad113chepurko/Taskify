@@ -9,19 +9,19 @@ Create tasks, mark them as done, and never forget what matters.
 - 📌 Persistent state (localStorage)
 - 🎨 Neumorphism UI
 - ⚡ Fast and lightweight
-- 🌙 Dark mode (optional)
-- 🧠 Zustand-powered state management (or other tech if used)
+- 🌙 Dark mode 
+- 🧠 Zustand-powered state management 
 
 🛠️ Tech Stack
 
 - Frontend: React, TypeScript
 - State Management: Zustand
-- Styling: SCSS (choose one or both)
-- Build Tool: Vite / Webpack (depending on your setup)
+- Styling: SCSS 
+- Build Tool: Vite / Webpack 
 
 📦 Installation
 
-git clone https://github.com/vlad113chepurko/taskify.git
-cd taskify
+git clone https://github.com/vlad113chepurko/Taskify.git
+cd Taskify
 npm install
 npm run dev
