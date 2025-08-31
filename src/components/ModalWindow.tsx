@@ -1,10 +1,12 @@
 import useModalStore from "@store/useModalStore";
+import { useNavigate } from "react-router";
 import './styles/_modal.scss';
 
 const ModalWindow = () => {
+  const navigate = useNavigate();
   const { message, setModal } = useModalStore();
   return (
-    <div className="modal">
+    <div onClick={() => navigate('/tasks')} className="modal">
       <img
         src="https://img.icons8.com/?size=100&id=5342&format=png&color=737373"
         alt="alert"

@@ -1,6 +1,8 @@
 import useTagsStore from "@store/useTagsStore";
 import components from "@components/components";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+
 const Tags = () => {
   const { tags, removeTag } = useTagsStore();
 
@@ -20,11 +22,15 @@ const Tags = () => {
     <div className="tasks__wrapper">
       <div className={"tasks__container"}>
         <article className={"tasks__h1-container"}>
-          <h1>Your Tags Suko</h1>
+          <h1>Your Tags</h1>
         </article>
         <div className={"tags__wrapper"}>
           {tags.map((tag) => (
-            <div className={"tag"} key={tag.id}>
+            <motion.div
+            animate={{ scale: 1 }}
+            initial={{ scale: 0.1 }}
+            transition={{ duration: 0.1 }}
+            className={"tag"} key={tag.id}>
               <div className={"tag"}>{tag.name}</div>
               <button
                 onClick={() => handleRemoveTag(tag.id)}
@@ -33,7 +39,7 @@ const Tags = () => {
               >
                 x
               </button>
-            </div>
+            </motion.div>
           ))}
         </div>
         <article className={"tasks__h1-container"}>

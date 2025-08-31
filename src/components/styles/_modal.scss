@@ -15,6 +15,10 @@
 
   border-radius: 10px;
 
+  &:hover {
+    cursor: pointer;
+  }
+
   img {
     margin-right: 1rem;
   }
@@ -26,12 +30,10 @@
 
 @keyframes modalOpen {
   from {
-    transform: translateY(-30px);
-    opacity: 0;
+    transform: translateX(1000px);
   }
   to {
-    transform: translateY(0);
-    opacity: 1;
+    transform: translateX(0);
   }
 }
 

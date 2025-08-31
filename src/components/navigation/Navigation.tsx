@@ -55,7 +55,7 @@ const Navigation = () => {
             width={30}
             height={30}
           />
-          My tags suko
+          My tags 
         </div>
       </nav>
   )

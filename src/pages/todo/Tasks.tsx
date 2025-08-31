@@ -15,15 +15,14 @@ const Tasks = () => {
 
   const sortedTasks = useMemo(() => {
     if (sortMethod === "all") return tasks;
-    if (sortMethod === "active") return tasks.filter(t => !t.completed);
-    if (sortMethod === "completed") return tasks.filter(t => t.completed);
+    if (sortMethod === "active") return tasks.filter((t) => !t.completed);
+    if (sortMethod === "completed") return tasks.filter((t) => t.completed);
     return tasks;
   }, [tasks, sortMethod]);
 
   return (
     <div className="tasks__wrapper">
       <div className={"tasks__container"}>
-
         <article className={"tasks__h1-container"}>
           <h1>My tasks</h1>
         </article>
@@ -31,8 +30,9 @@ const Tasks = () => {
         <components.SortTasks />
 
         {sortedTasks.length > 0 ? (
-          sortedTasks.map(task => (
-            <components.TaskItem key={task.id} task={task} />
+          sortedTasks.map((task) => (
+            <components.TaskItem
+             key={task.id} task={task} />
           ))
         ) : (
           <div className="tasks__list">

@@ -23,7 +23,7 @@ const TagList = ({ onTagSelect }: TagListProp) => {
           onClick={() => handlePressed(tag.id)}
           className={selectedTagId === tag.id ? 'tag__pressed' : 'tag'}
           key={tag.id}>
-          <div className={"tag"}>{tag.name}</div>
+          {tag.name}
         </div>
       ))}
     </div>

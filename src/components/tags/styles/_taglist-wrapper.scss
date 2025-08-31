@@ -20,9 +20,9 @@
   height: 40px;
   border-radius: 5px;
   padding: 1rem;
-  background: rgb(127, 15, 224);
   cursor: pointer;
   color: white;
+  background: rgb(79, 79, 79);
 }
 
 .tag__remove-btn {
@@ -39,5 +39,5 @@
 
 .tag__pressed {
   @extend .tag;
-  background: rgb(79, 79, 79);
+  background: rgb(127, 15, 224);
 }

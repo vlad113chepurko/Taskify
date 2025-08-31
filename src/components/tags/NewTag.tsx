@@ -20,7 +20,7 @@ const NewTag = () => {
   return (
     <form onSubmit={handleSubmit}>
       <section className="tasks__form-section">
-        <label htmlFor="tagName">
+        <label className={errors && "error__label"} htmlFor="tagName">
           {errors.tagName?.message || "Enter tag name"}
         </label>
         <input
